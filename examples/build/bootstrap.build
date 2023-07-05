@@ -1,0 +1,7 @@
+project = nanort-examples
+
+using version
+using config
+using test
+using install
+using dist

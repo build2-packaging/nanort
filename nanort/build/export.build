@@ -1,0 +1,6 @@
+$out_root/
+{
+  include nanort/
+}
+
+export $out_root/nanort/$import.target
