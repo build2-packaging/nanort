@@ -3,22 +3,22 @@
 </h1>
 
 <p align="center">
-    This project builds and defines the build2 package for <a href="https://github.com/nmwsharp/happly">happly</a>.
+    This project builds and defines the build2 package for <a href="https://github.com/lighttransport/nanort">nanort</a>.
     A C++ header-only parser for the PLY file format.
 </p>
 
 <p align="center">
-    <a href="https://github.com/nmwsharp/happly">
-        <img src="https://img.shields.io/website/https/github.com/nmwsharp/happly.svg?down_message=offline&label=Official&style=for-the-badge&up_color=blue&up_message=online">
+    <a href="https://github.com/lighttransport/nanort">
+        <img src="https://img.shields.io/website/https/github.com/lighttransport/nanort.svg?down_message=offline&label=Official&style=for-the-badge&up_color=blue&up_message=online">
     </a>
-    <a href="https://github.com/build2-packaging/happly">
-        <img src="https://img.shields.io/website/https/github.com/build2-packaging/happly.svg?down_message=offline&label=build2&style=for-the-badge&up_color=blue&up_message=online">
+    <a href="https://github.com/build2-packaging/nanort">
+        <img src="https://img.shields.io/website/https/github.com/build2-packaging/nanort.svg?down_message=offline&label=build2&style=for-the-badge&up_color=blue&up_message=online">
     </a>
-    <a href="https://cppget.org/happly">
-        <img src="https://img.shields.io/website/https/cppget.org/happly.svg?down_message=offline&label=cppget.org&style=for-the-badge&up_color=blue&up_message=online">
+    <a href="https://cppget.org/nanort">
+        <img src="https://img.shields.io/website/https/cppget.org/nanort.svg?down_message=offline&label=cppget.org&style=for-the-badge&up_color=blue&up_message=online">
     </a>
-    <a href="https://queue.cppget.org/happly">
-        <img src="https://img.shields.io/website/https/queue.cppget.org/happly.svg?down_message=empty&down_color=blue&label=queue.cppget.org&style=for-the-badge&up_color=orange&up_message=running">
+    <a href="https://queue.cppget.org/nanort">
+        <img src="https://img.shields.io/website/https/queue.cppget.org/nanort.svg?down_message=empty&down_color=blue&label=queue.cppget.org&style=for-the-badge&up_color=orange&up_message=running">
     </a>
 </p>
 
@@ -32,11 +32,11 @@ Make sure to add the stable section of the `cppget.org` repository to your proje
 
 Add the respective dependency in your project's `manifest` file to make the package available for import.
 
-    depends: happly ^ 6.4.6
+    depends: nanort ^ 6.4.6
 
-The single header-only C++ library to use happly as command-line argument parser can be imported by the following declaration in a `buildfile`.
+The single header-only C++ library to use nanort as command-line argument parser can be imported by the following declaration in a `buildfile`.
 
-    import happly = happly%lib{happly}
+    import nanort = nanort%lib{nanort}
 
 ## Configuration
 There are no configuration options vailable.
@@ -46,13 +46,13 @@ Currently, there are no known issues.
 
 ## Contributing
 Thanks in advance for your help and contribution to keep this package up-to-date.
-For now, please, file an issue on [GitHub](https://github.com/build2-packaging/happly/issues) for everything that is not described below.
+For now, please, file an issue on [GitHub](https://github.com/build2-packaging/nanort/issues) for everything that is not described below.
 
 ### Recommend Updating Version
-Please, file an issue on [GitHub](https://github.com/build2-packaging/happly/issues) with the new recommended version.
+Please, file an issue on [GitHub](https://github.com/build2-packaging/nanort/issues) with the new recommended version.
 
 ### Update Version by Pull Request
-1. Fork the repository on [GitHub](https://github.com/build2-packaging/happly) and clone it to your local machine.
+1. Fork the repository on [GitHub](https://github.com/build2-packaging/nanort) and clone it to your local machine.
 2. Run `git submodule init` and `git submodule update` to get the current upstream directory.
 3. Inside the `upstream` directory, checkout the new library version `X.Y.Z` by calling `git checkout vX.Y.Z` that you want to be packaged.
 4. If needed, change source files, `buildfiles`, and symbolic links accordingly to create a working build2 package. Make sure not to directly depend on the upstream directory inside the build system but use symbolic links instead.
