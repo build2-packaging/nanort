@@ -1,4 +1,4 @@
 : 1
-location: nanort/
+location: libnanort/
 :
-location: examples/
+location: libnanort-examples/

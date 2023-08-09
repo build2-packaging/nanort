@@ -1,0 +1,17 @@
+cxx.std = latest
+
+using cxx
+
+hxx{*}: extension = h
+ixx{*}: extension = ipp
+txx{*}: extension = tpp
+cxx{*}: extension = cc
+
+hxx{*}: cxx.importable = false
+
+test.target = $cxx.target
+
+# The examples need a very long time to run.
+# So, we disable tests by default for now.
+#
+# exe{*}: test = true

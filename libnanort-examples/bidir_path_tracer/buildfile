@@ -1,0 +1,12 @@
+import libs = libnanort%lib{nanort}
+import libs += libtinyexr%lib{tinyexr}
+import libs += stb_image_write%lib{stb_image_write}
+
+# This example uses an old version of 'tinyobjloader'
+# that is not provided by an official package.
+# Hence, symbolic links to the source files are used
+# instead of importing the library.
+#
+# import libs += libtinyobjloader%lib{tinyobjloader}
+
+exe{bidir-path-tracer}: {hxx cxx}{**} $libs

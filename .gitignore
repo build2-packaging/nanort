@@ -18,6 +18,9 @@
 !*manifest
 !*testscript
 
+!*.obj
+!*.mtl
+
 !*.md
 !LICENSE
 

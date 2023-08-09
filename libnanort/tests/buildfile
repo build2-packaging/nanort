@@ -1,0 +1,2 @@
+import nanort = libnanort%lib{nanort}
+exe{main}: {hxx cxx}{**} $nanort

@@ -1,0 +1,2 @@
+./: {*/ -build/ -common/} manifest legal{LICENSE} doc{*.md}
+./: common/file{**}

@@ -1,6 +1,6 @@
 : 1
-name: nanort-examples
-version: 0.1.0-a.0.z
+name: libnanort-examples
+version: 0.0.1
 project: nanort
 type: exe
 language: c++
@@ -8,13 +8,16 @@ summary: Examples for NanoRT
 license: MIT
 
 description-file: README.md
-
 url: https://github.com/lighttransport/nanort
 # email:
 
+package-description-file: PACKAGE-README.md
 package-url: https://github.com/build2-packaging/nanort/
 package-email: lyrahgames@mailbox.org
-#build-error-email: lyrahgames@mailbox.org
 
 depends: * build2 >= 0.16.0
 depends: * bpkg >= 0.16.0
+
+depends: libnanort == $
+depends: libtinyexr
+depends: stb_image_write ^ 1.15.0

@@ -1,7 +1,6 @@
-project = nanort-examples
+project = libnanort-examples
 
 using version
 using config
 using test
-using install
 using dist

@@ -1,4 +1,4 @@
-project = nanort
+project = libnanort
 
 using version
 using config

@@ -1,0 +1,1 @@
+../../upstream/examples/bidir_path_tracer/tiny_obj_loader.h

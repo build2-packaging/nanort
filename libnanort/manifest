@@ -1,6 +1,6 @@
 : 1
-name: nanort
-version: 0.1.0-a.0.z
+name: libnanort
+version: 0.0.1
 project: nanort
 type: lib,binless
 language: c++
@@ -8,15 +8,17 @@ summary: A simple single header only ray tracing kernel
 license: MIT
 
 description-file: README.md
-
 url: https://github.com/lighttransport/nanort
 # email:
 
+package-description-file: PACKAGE-README.md
 package-url: https://github.com/build2-packaging/nanort/
-package-email: lyrahgames@mailbox.org
-#build-error-email: lyrahgames@mailbox.org
-
-examples: nanort-examples == $
+package-email: packaging@build2.org
 
 depends: * build2 >= 0.16.0
 depends: * bpkg >= 0.16.0
+
+# Currently, we cannot make sure that
+# examples will run on the CI server.
+#
+# examples: libnanort-examples == $

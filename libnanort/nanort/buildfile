@@ -2,5 +2,3 @@ lib{nanort}: hxx{nanort}
 {
   cxx.export.poptions = "-I$src_base"
 }
-
-hxx{nanort}@./: install = include/

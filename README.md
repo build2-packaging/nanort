@@ -3,8 +3,8 @@
 </h1>
 
 <p align="center">
-    This project builds and defines the build2 package for <a href="https://github.com/lighttransport/nanort">nanort</a>.
-    A C++ header-only parser for the PLY file format.
+    This project builds and defines the build2 package for <a href="https://github.com/lighttransport/nanort">NanoRT</a>.
+    A single header only modern ray tracing kernel.
 </p>
 
 <p align="center">
@@ -14,32 +14,38 @@
     <a href="https://github.com/build2-packaging/nanort">
         <img src="https://img.shields.io/website/https/github.com/build2-packaging/nanort.svg?down_message=offline&label=build2&style=for-the-badge&up_color=blue&up_message=online">
     </a>
-    <a href="https://cppget.org/nanort">
-        <img src="https://img.shields.io/website/https/cppget.org/nanort.svg?down_message=offline&label=cppget.org&style=for-the-badge&up_color=blue&up_message=online">
+    <a href="https://cppget.org/libnanort">
+        <img src="https://img.shields.io/website/https/cppget.org/libnanort.svg?down_message=offline&label=cppget.org&style=for-the-badge&up_color=blue&up_message=online">
     </a>
-    <a href="https://queue.cppget.org/nanort">
-        <img src="https://img.shields.io/website/https/queue.cppget.org/nanort.svg?down_message=empty&down_color=blue&label=queue.cppget.org&style=for-the-badge&up_color=orange&up_message=running">
+    <a href="https://queue.cppget.org/libnanort">
+        <img src="https://img.shields.io/website/https/queue.cppget.org/libnanort.svg?down_message=empty&down_color=blue&label=queue.cppget.org&style=for-the-badge&up_color=orange&up_message=running">
     </a>
 </p>
 
 ## Usage
-Make sure to add the stable section of the `cppget.org` repository to your project's `repositories.manifest` to be able to fetch the package.
+As NanoRT does not provide any versioning scheme, make sure to add the alpha section of the `cppget.org` repository to your project's `repositories.manifest` to be able to fetch this package.
 
     :
     role: prerequisite
-    location: https://pkg.cppget.org/1/stable
+    location: https://pkg.cppget.org/1/alpha
     # trust: ...
+
+If the alpha section of `cppget.org` is not an option then add this Git repository itself instead as a prerequisite.
+
+    :
+    role: prerequisite
+    location: https://github.com/build2-packaging/nanort.git
 
 Add the respective dependency in your project's `manifest` file to make the package available for import.
 
-    depends: nanort ^ 6.4.6
+    depends: libnanort ^ 0.0.1
 
-The single header-only C++ library to use nanort as command-line argument parser can be imported by the following declaration in a `buildfile`.
+Then use the following line in your `buildfile` to import the library.
 
-    import nanort = nanort%lib{nanort}
+    import nanort = libnanort%lib{nanort}
 
 ## Configuration
-There are no configuration options vailable.
+There are no configuration options available.
 
 ## Issues
 Currently, there are no known issues.
@@ -52,9 +58,9 @@ For now, please, file an issue on [GitHub](https://github.com/build2-packaging/n
 Please, file an issue on [GitHub](https://github.com/build2-packaging/nanort/issues) with the new recommended version.
 
 ### Update Version by Pull Request
-1. Fork the repository on [GitHub](https://github.com/build2-packaging/nanort) and clone it to your local machine.
+1. Fork the repository on [GitHub](https://github.com/build2-packaging/happly) and clone it to your local machine.
 2. Run `git submodule init` and `git submodule update` to get the current upstream directory.
-3. Inside the `upstream` directory, checkout the new library version `X.Y.Z` by calling `git checkout vX.Y.Z` that you want to be packaged.
+3. Inside the `upstream` directory, checkout the new library version `X.Y.Z` by calling `git checkout vX.Y.Z` that you want to be packaged. Here, it is probably not a version but the newest commit from the master branch instead.
 4. If needed, change source files, `buildfiles`, and symbolic links accordingly to create a working build2 package. Make sure not to directly depend on the upstream directory inside the build system but use symbolic links instead.
 5. Update library version in `manifest` file if it has changed or add package update by using `+n` for the `n`-th update.
 6. Make an appropriate commit message by using imperative mood and a capital letter at the start and push the new commit to the `master` branch.
@@ -63,7 +69,7 @@ Please, file an issue on [GitHub](https://github.com/build2-packaging/nanort/iss
 9. After a successful pull request, we will run the appropriate commands to publish a new package version.
 
 ### Update Version Directly if You Have Permissions
-1. Inside the `upstream` directory, checkout the new library version `X.Y.Z` by calling `git checkout vX.Y.Z` that you want to be packaged.
+1. Inside the `upstream` directory, checkout the new library version `X.Y.Z` by calling `git checkout vX.Y.Z` that you want to be packaged. Here, it is probably not a version but the newest commit from the master branch instead.
 2. If needed, change source files, `buildfiles`, and symbolic links accordingly to create a working build2 package. Make sure not to directly depend on the upstream directory inside the build system but use symbolic links instead.
 3. Update library version in `manifest` file if it has changed or add package update by using `+n` for the `n`-th update.
 4. Make an appropriate commit message by using imperative mood and a capital letter at the start and push the new commit to the `master` branch.
