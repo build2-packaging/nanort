@@ -1,26 +1,11 @@
-<h1 align="center">
-    build2 Package for NanoRT
-</h1>
+# build2 Package for NanoRT
 
-<p align="center">
-    This project builds and defines the build2 package for <a href="https://github.com/lighttransport/nanort">NanoRT</a>.
-    A single header only modern ray tracing kernel.
-</p>
+[NanoRT](https://github.com/lighttransport/nanort) is a single header only modern ray tracing kernel.
 
-<p align="center">
-    <a href="https://github.com/lighttransport/nanort">
-        <img src="https://img.shields.io/website/https/github.com/lighttransport/nanort.svg?down_message=offline&label=Official&style=for-the-badge&up_color=blue&up_message=online">
-    </a>
-    <a href="https://github.com/build2-packaging/nanort">
-        <img src="https://img.shields.io/website/https/github.com/build2-packaging/nanort.svg?down_message=offline&label=build2&style=for-the-badge&up_color=blue&up_message=online">
-    </a>
-    <a href="https://cppget.org/libnanort">
-        <img src="https://img.shields.io/website/https/cppget.org/libnanort.svg?down_message=offline&label=cppget.org&style=for-the-badge&up_color=blue&up_message=online">
-    </a>
-    <a href="https://queue.cppget.org/libnanort">
-        <img src="https://img.shields.io/website/https/queue.cppget.org/libnanort.svg?down_message=empty&down_color=blue&label=queue.cppget.org&style=for-the-badge&up_color=orange&up_message=running">
-    </a>
-</p>
+[![Official](https://img.shields.io/website/https/github.com/lighttransport/nanort.svg?down_message=offline&label=Official&style=for-the-badge&up_color=blue&up_message=online)](https://github.com/lighttransport/nanort)
+[![build2](https://img.shields.io/website/https/github.com/build2-packaging/nanort.svg?down_message=offline&label=build2&style=for-the-badge&up_color=blue&up_message=online)](https://github.com/build2-packaging/nanort)
+[![cppget.org](https://img.shields.io/website/https/cppget.org/libnanort.svg?down_message=offline&label=cppget.org&style=for-the-badge&up_color=blue&up_message=online)](https://cppget.org/libnanort)
+[![queue.cppget.org](https://img.shields.io/website/https/queue.cppget.org/libnanort.svg?down_message=empty&down_color=blue&label=queue.cppget.org&style=for-the-badge&up_color=orange&up_message=running)](https://queue.cppget.org/libnanort)
 
 ## Usage
 As NanoRT does not provide any versioning scheme, make sure to add the alpha section of the `cppget.org` repository to your project's `repositories.manifest` to be able to fetch this package.
