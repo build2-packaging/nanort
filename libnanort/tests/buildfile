@@ -1,2 +1,3 @@
 import nanort = libnanort%lib{nanort}
-exe{main}: {hxx cxx}{**} $nanort
+./: exe{main}: cxx{main} $nanort
+./: exe{alternate_inclusion}: cxx{alternate_inclusion} $nanort
