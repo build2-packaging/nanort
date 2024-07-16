@@ -1,6 +1,6 @@
 : 1
 name: libnanort-examples
-version: 0.0.1
+version: 0.0.2-a.0.z
 project: nanort
 type: exe
 language: c++
