@@ -4,7 +4,7 @@ version: 0.0.2-a.0.z
 project: nanort
 type: lib,binless
 language: c++
-summary: A simple single header only ray tracing kernel
+summary: C++ ray tracing kernel library
 license: MIT
 
 description-file: README.md
@@ -15,8 +15,8 @@ package-description-file: PACKAGE-README.md
 package-url: https://github.com/build2-packaging/nanort/
 package-email: packaging@build2.org
 
-depends: * build2 >= 0.16.0
-depends: * bpkg >= 0.16.0
+depends: * build2 >= 0.17.0
+depends: * bpkg >= 0.17.0
 
 # Currently, we cannot make sure that
 # examples will run on the CI server.

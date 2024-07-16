@@ -4,7 +4,7 @@ version: 0.0.2-a.0.z
 project: nanort
 type: exe
 language: c++
-summary: Examples for NanoRT
+summary: C++ ray tracing kernel library, examples
 license: MIT
 
 description-file: README.md
@@ -13,10 +13,10 @@ url: https://github.com/lighttransport/nanort
 
 package-description-file: PACKAGE-README.md
 package-url: https://github.com/build2-packaging/nanort/
-package-email: lyrahgames@mailbox.org
+package-email: packaging@build2.org
 
-depends: * build2 >= 0.16.0
-depends: * bpkg >= 0.16.0
+depends: * build2 >= 0.17.0
+depends: * bpkg >= 0.17.0
 
 depends: libnanort == $
 depends: libtinyexr ^1.0.7
