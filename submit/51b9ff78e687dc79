@@ -1,0 +1,8 @@
+: 1
+name: libnanort
+version: 0.0.2
+type: lib,binless
+language: c++
+project: nanort
+summary: C++ ray tracing kernel library
+license: MIT
