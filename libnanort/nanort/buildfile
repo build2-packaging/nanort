@@ -1,4 +1,7 @@
 lib{nanort}: hxx{nanort}
 {
   cxx.export.poptions = "-I$src_base" "-I$src_root"
+  cxx.pkgconfig.include = include/nanort/ include/
 }
+
+hxx{*}: install = include/nanort/
