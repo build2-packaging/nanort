@@ -1,1 +1,1 @@
-../README.md
+../libnanort/PACKAGE-README.md
