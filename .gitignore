@@ -50,3 +50,4 @@
 
 # Allow specific symbolic links to directories.
 #
+!libnanort/tests/regression

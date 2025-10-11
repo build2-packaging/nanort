@@ -1,4 +1,5 @@
 import nanort = libnanort%lib{nanort}
 
-./: exe{main}: cxx{main} $nanort
-./: exe{alternate_inclusion}: cxx{alternate_inclusion} $nanort
+./: exe{inclusion1}: cxx{inclusion1} $nanort
+./: exe{inclusion2}: cxx{inclusion2} $nanort
+./: exe{accuracy}: regression/possible-accuracy-problem-30/cxx{main} $nanort
