@@ -1,28 +1,52 @@
+# Use whitelisting and ignore everything by default.
+#
 *
+
+# Don't ignore directories.
+#
 !*/
 
-!upstream
+# Don't ignore Git-specific files.
+#
+!.git*
 
-!*.h
-!*.c
-!*.cc
-!*.hpp
-!*.cpp
-!*.in
+# Allow upstream submodules.
+#
+!upstream*
 
-!.build2/**
-!buildfile
-!bootstrap.build
-!root.build
-!export.build
-!*manifest
-!*testscript
-
-!*.obj
-!*.mtl
-
+# Don't ignore license and documentation files.
+#
 !*.md
 !LICENSE
 
-!.git*
+# Don't ignore default C++ file extensions.
+#
+!*.h
+!*.cc
+!*.cpp
 
+# Don't ignore source generation files.
+#
+!*.in
+
+# Add original source files that might have been changed.
+#
+!*.orig
+!*.patch
+
+# Don't ignore standard build2 files.
+#
+!buildfile
+!bootstrap.build
+!export.build
+!root.build
+!*manifest
+!*testscript
+
+# Allow OBJ-specific files for tests.
+#
+!*.obj
+!*.mtl
+
+# Allow specific symbolic links to directories.
+#
