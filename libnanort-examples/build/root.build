@@ -1,10 +1,13 @@
-cxx.std = latest
+# The `bidir_path_tracer` example uses an old version of
+# 'tinyobjloader' that uses the C++ `register` keyword.
+# This is no longer allowed starting with C++17.
+# Thus, we reduce the required standard to C++14.
+#
+cxx.std = 14
 
 using cxx
 
 hxx{*}: extension = h
-ixx{*}: extension = ipp
-txx{*}: extension = tpp
 cxx{*}: extension = cc
 
 hxx{*}: cxx.importable = false

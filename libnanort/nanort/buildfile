@@ -1,7 +1,26 @@
+# Header
+#
 lib{nanort}: hxx{nanort}
-{
-  cxx.export.poptions = "-I$src_base" "-I$src_root"
-  cxx.pkgconfig.include = include/nanort/ include/
-}
 
+# Build and Export Options: Include Paths
+#
+# NanoRT is typically included in two ways:
+#   #include <nanort.h>
+#   #include <nanort/nanort.h>
+#
+# We have to reflect this in the package's source layout and
+# provide both include paths to users of the library target.
+# For now, we prioritize the first method.
+#
+cxx.poptions =+ "-I$src_base" "-I$src_root"
+lib{nanort}: cxx.export.poptions = "-I$src_base" "-I$src_root"
+
+# Installation
+#
+# The include path configuration must be preserved upon installation.
+# The generated pkg-config file (.pc) is configured to provide both
+# include paths, maintaining the same priority order defined above.
+#
+lib{nanort}: cxx.pkgconfig.include = include/nanort/ include/
+#
 hxx{*}: install = include/nanort/
